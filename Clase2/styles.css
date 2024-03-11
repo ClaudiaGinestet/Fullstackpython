@@ -1,47 +1,104 @@
-/* styles.css */
 body {
-
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url(lukas-blazek-f-TWhXOrLiU-unsplash.jpg);
+}
+.comentarios{
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #cccccc5a;
+    margin: 20px;
+}
+header,
+
+header {
+    justify-content: center;
+    text-align: center;
+
+
 }
 
-header,
 footer {
     text-align: center;
-    background-color: #f2f2f2;
+    background-color: #f2f2f255;
     padding: 20px;
 }
 
-main {
+aside {
+
+    text-align: center;
+    justify-items: center;
+    background-color: #f7f2ec6f;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    /* Utiliza flexbox para alinear los elementos en horizontal */
+    justify-content: center;
+    /* Centra los elementos horizontalmente */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    /* Asegúrate de quitar el margen predeterminado de la lista */
+    display: flex;
+    /* Utiliza flexbox para alinear los elementos en horizontal */
+}
+
+nav ul li {
+    margin-right: 40px;
+    /* Añade un margen entre los elementos */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.recetas {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-
+    justify-content: space-between;
 }
 
 .receta {
-    justify-content: left;
-    margin: 20px;
-    border: 1px solid #9f9e9e;
+    width: calc(33.33% - 20px);
+    /* Para que haya espacio entre las recetas */
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
     border-radius: 5px;
     overflow: hidden;
 }
 
-article {
-    margin-right: 15cm;
-    justify-content: left;
-}
-
 .receta img {
-    text-align: center;
-    size: auto;
+    width: 100%;
+    height: auto;
 }
 
 .descripcion {
-    text-align: justify;
-    padding: 10px;
-    size: 5cm;
-    max-width: 10cm;
+    padding: 20px;
+}
 
+main {
+    margin: 10px;
+    opacity: 1;
+}
+.instrucciones {
+    width: calc(67% - 20px);
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.detalle{
+    padding: 10px;
 }
