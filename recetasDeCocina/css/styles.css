@@ -4,8 +4,9 @@ body {
     padding: 0;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-image: url(lukas-blazek-f-TWhXOrLiU-unsplash.jpg);
+    background-image: url(../img/backgrounds/lukas-blazek-f-TWhXOrLiU-unsplash.jpg);
 }
+
 .comentarios{
     text-align: center;
     justify-content: center;
@@ -92,7 +93,7 @@ main {
     opacity: 1;
 }
 .instrucciones {
-    width: calc(67% - 20px);
+    width: calc(62% - 20px);
     margin-bottom: 20px;
     background-color: #fff;
     border: 1px solid #ccc;
@@ -101,4 +102,13 @@ main {
 }
 .detalle{
     padding: 10px;
+}
+.recetavideo{
+    width: calc(38% - 20px);
+    /* Para que haya espacio entre las recetas */
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;  
 }
