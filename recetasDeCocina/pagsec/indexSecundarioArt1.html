@@ -5,7 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chipa</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../css/stylessecon.css">
+    <style>
+        .animated {
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+        .visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 
 <body>
@@ -15,19 +27,38 @@
     <main>
         <section class="recetas">
             <article class="recetavideo">
-              <iframe width="560" height="315" 
-              src="https://www.youtube.com/embed/1GSbfFtdKrg?si=jSsTL0uc1PVmW8Tq" 
-              title="YouTube video player" frameborder="0" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-              allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1GSbfFtdKrg?si=jSsTL0uc1PVmW8Tq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <div class="descripcion">
-                    <h2>Chipá super quesosa!</h2>
+                    <h2 class="animated">Chipá super quesosa!</h2>
                     <p>Manos a la obra, muchaches!</p>
                 </div>
             </article>
             <article class="instrucciones">
+                <h2 class="animated">Ingredientes</h2>
+                <table class="ingredientes">
+                    <thead>
+                        <tr>
+                            <th>Ingrediente</th>
+                            <th>Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Paquete de mezcla para chipá</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Huevo</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Agua (en cc)</td>
+                            <td>80</td>
+                        </tr>
+                    </tbody>
+                </table>
                 <article class="detalle">
-                    <h2>Instrucciones</h2>
+                    <h2 class="animated">Instrucciones</h2>
                     <p> Batir levemente el huevo con 80 cc de agua. <br>
                         Agregar el contenido del paquete y mezclar. <br>
                         Volcar sobre la mesada y amasar suavemente 2 minutos hasta obtener una masa homogénea. <br>
@@ -40,6 +71,25 @@
     <footer>
         <p>&copy; 2024 Recetas de Cocina de Claudita</p>
     </footer>
+
+    <script>
+        // Agregar animaciones cuando la página se carga completamente
+        document.addEventListener("DOMContentLoaded", function() {
+            animateTitles();
+        });
+
+        function animateTitles() {
+            // Obtener todos los títulos que queremos animar
+            var titles = document.querySelectorAll('.animated');
+
+            // Iterar sobre cada título y agregar clase para iniciar animación
+            titles.forEach(function(title) {
+                setTimeout(function() {
+                    title.classList.add('visible');
+                }, 100); // Añadir un pequeño retraso para asegurar la animación
+            });
+        }
+    </script>
 </body>
 
 </html>
