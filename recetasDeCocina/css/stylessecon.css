@@ -23,6 +23,29 @@ header {
 
 
 }
+h1 {
+    color: black;
+ 
+}
+header h1 span {
+    transition: 0.5 linear;
+}
+h1:hover span:nth-child(1){
+    margin-right: 5px;
+}
+h1:hover span:nth-child(1)::after{
+    content: "-listo";
+}
+h1:hover span:nth-child(2)::after{
+    content: " la ac";
+}
+h1:hover span:nth-child(1){
+    color: #fff;
+    text-shadow: 0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #fff
+}
+
 
 footer {
     text-align: center;
